@@ -2,12 +2,15 @@
   background-image: url('imagenes/Logo\ celeste\ geométrico\ ilustrado\ de\ turismo.jpg');
   background-color: #fcfcfc;
   padding: 59px ;
-  position: relative;
-  background-size: contain;
+  background-size: initial;
   background-position: left; 
- background-attachment: scroll;
+  position: sticky;
+ background-attachment: fixed;
  background-repeat: no-repeat;
  text-decoration: none;
+ text-align: center;
+ padding: 32px;
+
 }
 
 .menu {
@@ -44,19 +47,50 @@ h1, .ubuntu-bold {
     font-style: normal;
     text-align: center;
     color: #083e19;
+    text-decoration: none;
 }
+
+.elementosComunes {
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
 .columna-1 {
-  -ms-flex: 33%;  
-  flex: 33%;
-  max-width: 33%;
+  -ms-flex: 40%;  
+  flex: 40%;
+  max-width: 40%;
   padding: 0 4px;
 }
 
 .columna-1 img {
-  margin-top: 18px;
-  vertical-align: middle;
+  margin-top: 8px;
+  vertical-align: auto;
   width: 100%;
 }
+
+.fila {
+  display: flexbox;  
+  display: flex;
+  -ms-flex-wrap: wrap;  
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .columna-1 {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columna-1 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 
 
 
@@ -69,3 +103,4 @@ h1, .ubuntu-bold {
 }
 
 
+}
