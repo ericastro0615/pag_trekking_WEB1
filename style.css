@@ -85,8 +85,6 @@
    object-position: none;
  }
 
-
-
  .contenedor-main img {
    width: 100%;
    height: 100%;
@@ -105,6 +103,19 @@
    margin-top: 20px;
    bottom: auto;
  }
+
+ .fila-Inicio {
+  padding: auto;
+  flex-direction: column;
+ }
+
+ .columna-Inicio {
+  width: 50%;
+  border: #001f0a solid;
+ }
+
+
+ 
 
  /*-------------------------------estilo form----------------------------------------*/
  .formato-h4 {
