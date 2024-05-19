@@ -1,197 +1,207 @@
+* {
+   box-sizing: border-box;
 
-
-.headerLogo {
-  padding-left : 10px;  
-  width: 1200px;
-  height: 100px;
-  position: relative;
-  background-attachment: fixed;
-  background-repeat: no-repeat; 
-  text-decoration: none; 
-  object-fit: contain;
-}
-
-.headerLogo img { 
-  width: 10%; 
-  height: 100%; 
- position: absolute;
- top: 0px;
- object-fit: scale-down;
- 
-}
-
-.headerLogo h1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-  font-weight: 700; 
-  font-size: xx-large;
-  font-style: normal;
-  text-align: center;
-  color: #001f0a;
-  text-decoration: none;
-}
-
-
-.menu {
-  background-color: rgb(210, 253, 239);
-  overflow: hidden;
-  padding: 16px; /* Ajuste del padding para el menú */ 
-  display: flex; /* Uso de flexbox */
-  justify-content: center; /* Centra los elementos del menú horizontalmente */
-}
-
-.menu a {
-  color: #040000;
-  text-align: left;
-  outline: none;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-    border-bottom: 3px solid transparent;
-  }
-  
-  .menu a:hover {
-    border-bottom: 3px solid rgb(132, 150, 242);
-  }
-  
-  h1,
-  .ubuntu-bold {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-size: xx-large;
-    font-style: normal;
-    text-align: center;
-    color: #a5deb7;
-    text-decoration: none;
-  }
-  
-  .contenedor-main {
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    flex-wrap: wrap;
-    object-position: none;
-  
-  }
-  
-  .elementosComunes {
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .contenedor-main img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill; 
-  }
-  
-  .footer {
-    background-color: rgb(251, 251, 251);
-    text-align: center;
-    font-style: italic;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: smaller;
-    /* Tamaño del texto más pequeño */
-    margin-top: 20px;
-    bottom: auto;
-}
-
-
-
-/*-------------------------------estilo form----------------------------------------*/
- .formato-h4 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  margin: 2rem ;
  }
- .contact-form {
-  --form-ok-color: #4caf50;
-  --form-error-color: #f44336;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+
+ .headerLogo {
+   padding-left: 10px;
+   width: 1200px;
+   height: 100px;
+   position: relative;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   text-decoration: none;
+   object-fit: contain;
+ }
+
+ .headerLogo img {
+   width: 10%;
+   height: 100%;
+   position: absolute;
+   top: 0px;
+   object-fit: scale-down;
+
+ }
+
+ .headerLogo h1 {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-weight: 700;
+   font-size: xx-large;
+   font-style: normal;
+   text-align: center;
+   color: #001f0a;
+   text-decoration: none;
+ }
+
+
+ .menu {
+   background-color: rgb(210, 253, 239);
+   overflow: hidden;
+   padding: 1rem;
+   display: flex;
+   justify-content: center;
+ }
+
+ .menu a {
+   color: #040000;
+   text-align: left;
+   outline: none;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+   border-bottom: 3px solid transparent;
+ }
+
+ .menu a:hover {
+   border-bottom: 3px solid rgb(132, 150, 242);
+ }
+
+ h1,
+ .ubuntu-bold {
+   font-family: "Ubuntu", sans-serif;
+   font-weight: 700;
+   font-size: xx-large;
+   font-style: normal;
+   text-align: center;
+   color: #a5deb7;
+   text-decoration: none;
+ }
+
+ .elementosComunes {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  text-align: justify;
 }
+
+ .contenedor-main {
+   display: flex;
+   flex-direction: column;
+   justify-content: left;
+   align-items: normal;
+   margin: 0 auto;
+   padding: auto;
+   width: 90%;
+   flex-wrap: wrap;
+   object-position: none;
+ }
+
+
+
+ .contenedor-main img {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+   border: 2px solid #484444;
+   border-radius: 8px;
+ }
+
+ .footer {
+   background-color: rgb(251, 251, 251);
+   text-align: center;
+   font-style: italic;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: smaller;
+   /* Tamaño del texto más pequeño */
+   margin-top: 20px;
+   bottom: auto;
+ }
+
+ /*-------------------------------estilo form----------------------------------------*/
+ .formato-h4 {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 2rem;
+   text-align: center;
+   margin: 2rem;
+ }
+
+ .contact-form {
+   --form-ok-color: #4caf50;
+   --form-error-color: #f44336;
+   margin-left: auto;
+   margin-right: auto;
+   width: 80%;
+ }
 
  .contact-form>* {
-      padding: 0.5rem;
-      margin: 1rem auto;
-      display: block;
-      width: 100%;
-    }
- 
-    .contact-form textarea {
-      resize: none;
-    }
+   padding: 0.5rem;
+   margin: 1rem auto;
+   display: block;
+   width: 100%;
+ }
 
-    
-    .contact-form-response {
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: center;
-    }
+ .contact-form textarea {
+   resize: none;
+ }
 
-    .contact-form input,
-    .contact-form textarea {
-      font-size: 1rem;
-      font-family: sans-serif;
-    }
 
-    .contact-form input[type="submit"] {
-      width: 50%;
-      font-weight: bold;
-      cursor: pointer;
-      background-color: #73c392;
-    }
-    .contact-form input[type="reset"] {
-      width: 50%;
-      font-weight: bold;
-      cursor: pointer; 
-      background-color: #edc86b;
-  
-    }
-    .contact-form *::placeholder {
-      color: #000;
-    }
+ .contact-form-response {
+   font-size: 1.5rem;
+   font-weight: bold;
+   text-align: center;
+ }
 
-    .contact-form [required]:valid {
-      border: thin solid var(--form-ok-color);
-    }
+ .contact-form input,
+ .contact-form textarea {
+   font-size: 1rem;
+   font-family: sans-serif;
+ }
 
-    .contact-form [required]:invalid {
-      border: thin solid var(--form-error-color);
-    }
+ .contact-form input[type="submit"] {
+   width: 50%;
+   font-weight: bold;
+   cursor: pointer;
+   background-color: #73c392;
+ }
 
-    .contact-form-error {
-      margin-top: -1rem;
-      font-size: 80%;
-      background-color: var(--form-error-color);
-      color: #fff;
-      transition: all 800ms ease;
-    }
+ .contact-form input[type="reset"] {
+   width: 50%;
+   font-weight: bold;
+   cursor: pointer;
+   background-color: #edc86b;
 
-    .contact-form-error.is-active {
-      display: block;
-      animation: show-message 1s 1 normal 0s ease-out both;
-    }
+ }
 
-    .contact-form-loader {
-      text-align: center;
-    }
+ .contact-form *::placeholder {
+   color: #000;
+ }
 
-    .none {
-      display: none;
-    }
+ .contact-form [required]:valid {
+   border: thin solid var(--form-ok-color);
+ }
 
-    @keyframes show-message {
-      0% {
-        visibility: hidden;
-        opacity: 0;
-      }
+ .contact-form [required]:invalid {
+   border: thin solid var(--form-error-color);
+ }
 
-      100% {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
+ .contact-form-error {
+   margin-top: -1rem;
+   font-size: 80%;
+   background-color: var(--form-error-color);
+   color: #fff;
+   transition: all 800ms ease;
+ }
 
+ .contact-form-error.is-active {
+   display: block;
+   animation: show-message 1s 1 normal 0s ease-out both;
+ }
+
+ .contact-form-loader {
+   text-align: center;
+ }
+
+ .none {
+   display: none;
+ }
+
+ @keyframes show-message {
+   0% {
+     visibility: hidden;
+     opacity: 0;
+   }
+
+   100% {
+     visibility: visible;
+     opacity: 1;
+   }
+ }
