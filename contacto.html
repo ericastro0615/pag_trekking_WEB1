@@ -34,24 +34,31 @@
       ¿Necesitas más información? <br>
       Envíanos tu consulta o cualquier información adicional que necesites.
     </p>
-    <form action="/action_page.php" novalidate>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" value="" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Por favor, ingrese solo letras y espacios."><br><br>
-    
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" name="apellido" value="" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Por favor, ingrese solo letras y espacios."><br><br>
-    
-      <label for="numContacto">Número de contacto:</label>
-      <input type="number" id="numContacto" name="numContacto" value="" pattern="\d+" title="Por favor, ingrese solo números."><br><br>
-    
-      <label for="correo">Correo:</label>
-      <input type="email" id="correo" name="correo" value="" title="Por favor, ingrese un correo electrónico válido."><br><br>
-    
-      <label for="campoTexto">Consulta:</label>
-      <input type="text" id="campoTexto" name="campoTexto" value=""><br><br>
-    
-      <input type="submit" value="Enviar">
-    </form>
+              <h4>Formulario de Contacto</h4>
+          <form class="contact-form">
+            <input type="text" name="name" placeholder="Escribe tu nombre"
+              title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+            <br><br><input type="email" name="email" placeholder="Escribe tu correo" title="Correo incorrecto"
+              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+
+              <br><br><input type="tel" name="phone" placeholder="Número de teléfono" title="Formato de teléfono incorrecto"
+              pattern="^\d{10}$" required>
+
+            <br><br><input type="text" name="subject" placeholder="Mensaje" title="El asunto es requerido" required>
+            <br><br><textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios"
+
+              title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea><br><br>
+            <br><br><input type="submit" value="Enviar">
+            <button type="reset" class="reset-button">Restablecer</button>
+           
+
+            <div class="contact-form-loader none">
+              <img src="imagenes\load.svg" alt="Cargando">
+            </div>
+            <div class="contact-form-response none">
+              <p>Los datos han sido enviados</p>
+            </div>
+          </form>
     
 
   </div>
