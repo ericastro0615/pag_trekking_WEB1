@@ -1,6 +1,5 @@
 * {
    box-sizing: border-box;
-
  }
 
  .headerLogo {
@@ -89,7 +88,7 @@
    width: 100%;
    height: 100%;
    object-fit: fill;
-   border: 2px solid #484444;
+   border: 2px solid #ffffff;
    border-radius: 8px;
  }
 
@@ -99,19 +98,24 @@
    font-style: italic;
    font-family: 'Courier New', Courier, monospace;
    font-size: smaller;
-   /* Tamaño del texto más pequeño */
    margin-top: 20px;
    bottom: auto;
  }
 
+
+ /*-------------division en columnas de inicio.html */
  .fila-Inicio {
   padding: auto;
   flex-direction: column;
+  width: 50%;
+  border: #f44336 solid;
+  margin: 1rem;
  }
 
- .columna-Inicio {
-  width: 50%;
+ .columna-Inicio { 
   border: #001f0a solid;
+ 
+
  }
 
 
