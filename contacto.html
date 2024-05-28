@@ -6,6 +6,7 @@
   <title>Contacto</title>
   <link rel="icon" type="image/png" href="/imagenes/icon_trekking.png">
   <link rel="stylesheet" href="style.css">
+  <script src="formulario.js"></script>
 </head>
 
 <body>
@@ -28,51 +29,69 @@
     </nav>
   </header>
 
+  <main class="main-form">
+    <div class="form-content">
+      <form name="datos" id="datos" onsubmit="return validar()">
+        <h3>Formulario de contacto</h3>
 
+        <!-- Nombre -->
+        <label for="nombre"> Nombre: </label>
+        <input type="text" name="nombre" id="nombre" maxlength="16" placeholder="Ingresa su nombre" />
+        <span id="errorname" class="wrong">Ingrese entre 3 y 16 caracteres</span>
 
+        <!-- Apellido -->
+        <label for="apellido"> Apellido: </label>
+        <input type="text" name="apellido" id="apellido" maxlength="16" placeholder="Ingresa su apellido" />
+        <span id="errorsurn" class="wrong">Ingrese entre 3 y 16 caracteres</span>
 
-  <div class="elementosComunes">
-    <p>
-      ¿Necesitas más información? <br>
-      Envíanos tu consulta o cualquier información adicional que necesites.
-    </p>
-              <h4>Formulario de Contacto</h4>
-          <form class="contact-form">
-            <input type="text" name="name" placeholder="Escribe tu nombre"
-              title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-            <br><br><input type="email" name="email" placeholder="Escribe tu correo" title="Correo incorrecto"
-              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+        <!-- Edad -->
+        <label for="edad"> Edad: </label>
+        <input type="number" name="edad" id="edad" placeholder="Apto para mayores de 18 años" />
+        <span id="errorage" class="wrong">Ingrese una edad válida (18-90)</span>
 
-              <br><br><input type="tel" name="phone" placeholder="Número de teléfono" title="Formato de teléfono incorrecto"
-              pattern="^\d{10}$" required>
+        <!-- Email -->
+        <label for="email"> Ingrese su correo: </label>
+        <input type="email" id="email" maxlength="50" placeholder="direccion@correo.com" />
+        <span id="erroremail" class="wrong">Ingrese una dirección de correo válida</span>
 
-            <br><br><input type="text" name="subject" placeholder="Mensaje" title="El asunto es requerido" required>
-            <br><br><textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios"
+        <!-- Comentarios -->
+        <label for="comentario"> Comentarios: </label>
+        <textarea name="Comentarios" cols="30" rows="5" id="comentario" maxlength="250"
+          placeholder="Máximo 250 caracteres"></textarea>
+        <span id="errorcom" class="wrong">Ingrese un comentario de máximo 250 caracteres</span>
 
+        <!-- Checkbox -->
+        <div class="check">
+          <input type="checkbox" id="terms" name="terms" />
+          <label for="terms"> Acepto los términos y condiciones</label><br>
+        </div>
+        <span id="errorcheck" class="wrong">Debe aceptar los términos y condiciones</span>
 
-              title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea><br><br>
-            <br><br><input type="submit" value="Enviar">
-            <input type="reset" class="reset-button"  value="Restablecer">
-           
+        <!-- Botón -->
+        <button class="btn" type="submit" id="enviar" value="Enviar">Enviar</button>
+      </form>
 
-            <div class="contact-form-loader none">
-              <img src="imagenes\load.svg" alt="Cargando">
-            </div>
-            <div class="contact-form-response none">
-              <p>Los datos han sido enviados</p>
-            </div>
-          </form>
-    
+      <div id="confirm" class="mensaje">
+        <!-- Mensaje con los datos ingresados -->
+        <div id="datosIngresados" style="display: none;">
+          <h3>Datos Ingresados:</h3>
+          <p><strong>Nombre:</strong> <span id="nombre-ingresado"></span></p>
+          <p><strong>Apellido:</strong> <span id="apellido-ingresado"></span></p>
+          <p><strong>Edad:</strong> <span id="edad-ingresado"></span></p>
+          <p><strong>Correo Electrónico:</strong> <span id="email-ingresado"></span></p>
+          <p><strong>Comentario:</strong> <span id="comen-ingresado"></span></p>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  </div>
-
-
+  <footer>
+    <div class="footer">
+      <p>Diseño: Erica Castro - Sebastian Castro</p>
+    </div>
+  </footer>
 
 </body>
-<footer>
-  <div class="footer">
-    <p>Diseño: Erica Castro - Sebastian Castro</p>
-  </div>
-</footer>
+
 
 </html>
